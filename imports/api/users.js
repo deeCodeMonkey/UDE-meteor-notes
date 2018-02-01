@@ -2,17 +2,22 @@
 import SimpleSchema from 'simpl-schema';
 import { Accounts } from 'meteor/accounts-base';
 
-
-Accounts.validateNewUser((user) => {
+//restructure for testing
+export const validateNewUser = (user) => {
     const email = user.emails[0].address;
 
-        new SimpleSchema({
-            email: {
-                type: String,
-                regEx: SimpleSchema.RegEx.Email
-            }
-        }).validate({ email });
-   
+    new SimpleSchema({
+        email: {
+            type: String,
+            regEx: SimpleSchema.RegEx.Email
+        }
+    }).validate({ email });
+
     //password validation in Signup component
     return true;
-});
+}
+
+if (Meteor.isServer) {
+    //restructure for testing
+    Accounts.validateNewUser(validateNewUser);
+}
