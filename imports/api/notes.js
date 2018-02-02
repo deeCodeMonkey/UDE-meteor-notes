@@ -64,14 +64,14 @@ Meteor.methods({
             _id,
             ...updates
             });
-        //
+        
         Notes.update({
             _id,
             userId: this.userId
         }, {
                 $set: {
-                    updatedAt: moment().valueOf,
-                    ...updates
+                    ...updates,
+                    updatedAt: moment().valueOf()
                 }
             }
         );
