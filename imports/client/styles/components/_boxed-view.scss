@@ -1,7 +1,6 @@
 ﻿.boxed-view {
     //flexbox
     align-items: center;
-    background: $boxed-view-overlay-bg;
     //flexbox
     display: flex;
     //100% of viewport height
@@ -13,6 +12,7 @@
 
 .boxed-view__box {
     background: $boxed-view-bg;
+    border: 1px solid $boxed-view-border-color;
     padding: 2.4rem;
     text-align: center;
     width: 24rem;

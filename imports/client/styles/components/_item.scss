@@ -1,11 +1,53 @@
-﻿.item {
-    background: $item-bg;
-    border: 1px solid $item-border;
-    margin-bottom: $space;
+﻿//item list
+.item-list {
+    background-color: white;
+    border: 1px solid $grey;
+    //becauset the overflow is from top to bottom, is y not x
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.item-list__header {
+    display: flex;
+    flex-direction: column;
     padding: $space;
 }
 
-.item__message {
+//item
+.item {
+    border-left: $item-border-width solid transparent;
+    //when item not selected or hovered
+    cursor: pointer;
+    padding: $space;
+    transition: background-color .3s ease, border-left .3s ease;
+}
+
+.item:hover {
+    background-color: $light-grey;
+    border-left: $item-border-width solid $grey;
+}
+
+.item--selected, .item--selected:hover {
+  background-color: $light-grey;
+  border-left: $item-border-width solid $brand-primary;
+}
+
+.item__title {
+  font-weight: normal;
+  font-size: $base-font-size;
+  margin-bottom: .4rem;
+}
+
+.item--selected .item__title {
+  font-weight: bold;
+}
+
+.item__subtitle {
+  color: $dark-grey;
+  margin: 0;
+}
+
+/*.item__message {
     color: $item-text-color;
 }
 
@@ -14,4 +56,11 @@
     font-style: italic;
     text-align: center;
     margin: 0;
+}*/
+
+//empty item
+.empty-item {
+    font-style: italic;
+    padding: $space;
+    text-align: center;
 }

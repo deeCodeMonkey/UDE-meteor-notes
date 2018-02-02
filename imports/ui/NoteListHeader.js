@@ -9,8 +9,8 @@ import { Notes } from '../api/notes';
 
 export const NoteListHeader = (props) => {
     return (
-        <div className="">
-            <button onClick={() => props.meteorCall()}>New Note</button>
+        <div className="item-list__header">
+            <button className="button" onClick={() => props.meteorCall()}>Create Note</button>
         </div>
     );
 }

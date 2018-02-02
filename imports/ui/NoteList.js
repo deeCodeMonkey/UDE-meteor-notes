@@ -13,8 +13,7 @@ import NoteListEmpytItem from './NoteListEmptyItem';
 
 export const NoteList = (props) => {
     return (
-        <div className="">
-            NoteList{props.notes.length}
+        <div className="item-list">
 
             <NoteListHeader />
 
