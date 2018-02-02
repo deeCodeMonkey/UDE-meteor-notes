@@ -1,4 +1,6 @@
 ﻿@import './variables';
+@import './mixins/media-query-mixins';
+
 @import './base';
 @import './components/_boxed-view.scss';
 @import './components/_button.scss';

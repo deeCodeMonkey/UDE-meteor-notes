@@ -1,0 +1,6 @@
+﻿//use mixin to set criteria for media queries
+@mixin desktop () {
+    @media(min-width: 50rem) {
+        @content;
+    }
+}
