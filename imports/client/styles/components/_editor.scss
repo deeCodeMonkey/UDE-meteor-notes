@@ -18,13 +18,15 @@
 
 .editor__body {
     //box adjusts to height of page
-   flex-grow: 1;
-   font-weight: 300;
-   margin-bottom: $large-space;
-   outline: none;
-   padding: $input-spacing;
-   //disble resizing
-   resize: none;
+    flex-grow: 1;
+    font-weight: 300;
+    margin-bottom: $large-space;
+    outline: none;
+    padding: $input-spacing;
+    //disble resizing
+    resize: none;
+    //momentum scrolling
+    -webkit-overflow-scrolling: touch;
 }
 
 .editor__message {

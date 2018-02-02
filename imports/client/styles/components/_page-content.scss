@@ -26,6 +26,8 @@
     left: -100vw;
     right: 0;
     bottom: 0;
+    //in case the overflow scrolling creates bug for z-index
+    z-index: 1;
 
     @include desktop {
         display: flex;

@@ -5,6 +5,8 @@
     //becauset the overflow is from top to bottom, is y not x
     overflow-y: scroll;
     width: 100%;
+    //momentum scrolling for cell phone
+    -webkit-overflow-scrolling: touch;
 }
 
 .item-list__header {
