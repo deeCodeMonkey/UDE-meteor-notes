@@ -1,20 +1,43 @@
-﻿.page-content {
+﻿//MOBILE FIRST approach means core styles applies to mobile, and media queries will adjust to larger screens
+
+.page-content {
     display: flex;
     height: $page-content-height;
     margin: 0 auto;
     max-width: $site-max-width;
     //top/bottom left/right
-    padding: $large-space $space;
+    //padding: $large-space $space;
+
+    @media(min-width: 50rem) {
+        padding: $large-space $space;
+    }
 }
 
 .page-content__sidebar {
-    display: flex;
+    display: none;
+    //display: flex;
     padding-right: $large-space;
     width: $page-content-sidebar-width;
+
+    @media(min-width: 50rem){
+        display: flex;
+    }
 }
+
+/*//media query
+//only apply when min width is 50rem wide 
+@media (min-width: 50rem){
+    .page-content__sidebar * {
+        color: red;
+    }
+}*/
 
 .page-content__main {
     display: flex;
-    width: $page-content-main-width;
+    width: 100%;
+
+    @media (min-width: 50rem){
+        width: $page-content-main-width;
+    }
 }
 
