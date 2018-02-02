@@ -16,14 +16,29 @@
 }
 
 .page-content__sidebar {
-    display: none;
-    //display: flex;
-    padding-right: $large-space;
-    width: $page-content-sidebar-width;
+    //display: none;
+    display: flex;
+    transition: left .3s ease;
+    width: 100vw;
+
+    position: fixed;
+    top: $header-height;
+    left: -100vw;
+    right: 0;
+    bottom: 0;
 
     @include desktop {
         display: flex;
+        padding-right: $large-space;
+        position: static;
+        width: $page-content-sidebar-width;
     }
+}
+
+//target sidebar inside of is-nav-open
+.is-nav-open  .page-content__sidebar {
+    //display: block;
+    left: 0;
 }
 
 /*//media query
