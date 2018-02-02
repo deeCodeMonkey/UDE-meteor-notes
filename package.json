@@ -19,5 +19,8 @@
     "enzyme": "^3.3.0",
     "expect": "^22.1.0",
     "react-addons-test-utils": "^15.6.2"
+  },
+  "engines": {
+    "node": "8.5.0"
   }
 }
